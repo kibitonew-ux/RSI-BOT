@@ -1,0 +1,43 @@
+# Copia a .env solo para pruebas en tu PC. En Railway, estas variables van en la pestaña Variables.
+# No subas el archivo .env a GitHub.
+
+# Telegram (obligatorias)
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_CHAT_ID=
+
+# Mercado: spot | swap (perpetuos) | both (todas las monedas; si existe perpetuo se usa ese)
+MARKET=both
+QUOTE=USDT
+TIMEFRAME=5m
+
+# Filtros: volumen mínimo en 24h (USDT). 0 = analizar todo. BLACKLIST: bases separadas por comas
+MIN_QUOTE_VOLUME=0
+MAX_SYMBOLS=0
+BLACKLIST=
+
+# Estrategia (mismos valores por defecto que el script de TradingView)
+RSI_LEN=14
+PIVOT_LEFT=5
+PIVOT_RIGHT=5
+TOL_PCT=3.0
+MIN_BARS_BETWEEN=10
+PRICE_CONFIRM=true
+REQUIRE_FLIP=false
+ST_FACTOR=3.0
+ST_ATR_LEN=10
+RECENT_BARS=8
+# Objetivo informativo en múltiplos del riesgo (distancia hasta la línea SuperTrend)
+TP_R_MULT=2.0
+
+# Alertas
+COOLDOWN_MIN=30
+MAX_ALERTS=10
+NOTIFY_SHORTS=true
+NOTIFY_SPOT_SHORTS=false
+HEARTBEAT_MIN=60
+
+# Rendimiento
+CONCURRENCY=5
+
+# Estado: en Railway se detecta el Volume solo. Define esto únicamente si lo necesitas.
+# STATE_FILE=/data/state.json
